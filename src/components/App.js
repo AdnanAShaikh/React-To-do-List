@@ -10,14 +10,11 @@ import { Stats } from "./Stats";
 // ];
 
 export default function App() {
-  const [items, setItems] = useState([]);
+  const storedItems = localStorage.getItem("items");
 
-  useEffect(() => {
-    const storedItems = localStorage.getItem("items");
-    if (storedItems) {
-      setItems(JSON.parse(storedItems));
-    }
-  }, []);
+  const [items, setItems] = useState(
+    storedItems.length !== 0 ? JSON.parse(storedItems) : []
+  );
 
   useEffect(() => {
     localStorage.setItem("items", JSON.stringify(items));

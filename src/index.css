@@ -12,9 +12,8 @@ html {
 
 body {
   font-size: 2.4rem;
-  font-family: sans-serif;
+  font-family: "Quicksand", sans-serif;
   color: #5a3e2b;
-  font-family: "Quicksand";
   font-weight: 500;
 }
 
@@ -74,7 +73,6 @@ input {
   background-color: #5a3e2b;
   color: #ffebb3;
   padding: 4rem 0;
-
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -94,8 +92,6 @@ input {
 .list ul {
   list-style: none;
   width: 80%;
-  /* overflow: scroll; */
-
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.2rem;
@@ -129,4 +125,168 @@ input[type="checkbox"] {
   text-align: center;
   font-weight: 700;
   padding: 3.2rem 0;
+}
+
+/* Responsive Design */
+
+@media (max-width: 1200px) {
+  h1 {
+    font-size: 6rem;
+    padding: 2rem 0;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  button,
+  select,
+  input {
+    padding: 1rem 2.4rem;
+    font-size: 1.6rem;
+  }
+
+  .add-form {
+    padding: 2.4rem 0;
+  }
+
+  .list {
+    padding: 3.2rem 0;
+  }
+
+  .stats {
+    padding: 2.4rem 0;
+  }
+}
+
+@media (max-width: 992px) {
+  h1 {
+    font-size: 5rem;
+    word-spacing: 20px;
+  }
+
+  h3 {
+    font-size: 1.8rem;
+  }
+
+  button,
+  select,
+  input {
+    padding: 0.8rem 2rem;
+    font-size: 1.4rem;
+  }
+
+  .add-form {
+    flex-direction: column;
+    gap: 1.2rem;
+    padding: 2rem 1.6rem;
+  }
+
+  .list ul {
+    width: 90%;
+    gap: 1.6rem;
+  }
+
+  .list li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .list li button {
+    font-size: 1.6rem;
+    padding: 0.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 50%;
+  }
+
+  h1 {
+    font-size: 4rem;
+    padding: 1.6rem 0;
+    word-spacing: 15px;
+  }
+
+  h3 {
+    font-size: 1.6rem;
+  }
+
+  button,
+  select,
+  input {
+    padding: 0.8rem 1.6rem;
+    font-size: 1.2rem;
+  }
+
+  .add-form {
+    padding: 1.6rem;
+  }
+
+  .list {
+    padding: 2.4rem 0;
+  }
+
+  .list ul {
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .list li {
+    gap: 0.8rem;
+  }
+
+  .stats {
+    padding: 2rem 0;
+  }
+}
+
+@media (max-width: 576px) {
+  html {
+    font-size: 45%;
+  }
+
+  h1 {
+    font-size: 3.6rem;
+    padding: 1.2rem 0;
+    word-spacing: 10px;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+  }
+
+  button,
+  select,
+  input {
+    padding: 0.6rem 1.2rem;
+    font-size: 2rem;
+  }
+
+  .add-form {
+    padding: 1.2rem;
+  }
+
+  .list {
+    padding: 1.6rem;
+    display: block;
+  }
+
+  .list ul {
+    gap: 0.8rem;
+  }
+
+  .list li {
+    gap: 0.6rem;
+    margin-bottom: 1rem;
+  }
+
+  .list li button {
+    margin-bottom: 1rem;
+  }
+
+  .stats {
+    padding: 1.6rem 0;
+  }
 }

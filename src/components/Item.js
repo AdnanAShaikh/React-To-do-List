@@ -12,8 +12,8 @@ export function Item({ item, handleDeleteItem, onToggleItems }) {
 
         {item.quantity}
         {item.description}
+        <button onClick={() => handleDeleteItem(item.id)}>❌</button>
       </span>
-      <button onClick={() => handleDeleteItem(item.id)}>❌</button>
     </li>
   );
 }
