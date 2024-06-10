@@ -8,7 +8,7 @@ export default function App() {
   const storedItems = localStorage.getItem("items");
 
   const [items, setItems] = useState(
-    storedItems.length !== 0 ? JSON.parse(storedItems) : []
+    !storedItems ? [] : JSON.parse(storedItems)
   );
 
   useEffect(() => {
