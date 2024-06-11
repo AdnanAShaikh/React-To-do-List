@@ -5,6 +5,7 @@ export function Item({ item, handleDeleteItem, onToggleItems }) {
         <input
           type="checkbox"
           value={item.packed}
+          checked={item.packed ? true : false}
           onChange={() => {
             onToggleItems(item.id);
           }}
