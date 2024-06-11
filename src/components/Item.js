@@ -10,9 +10,7 @@ export function Item({ item, handleDeleteItem, onToggleItems }) {
             onToggleItems(item.id);
           }}
         />
-
-        {item.quantity}
-        {item.description}
+        {item.quantity} {item.description}
         <button onClick={() => handleDeleteItem(item.id)}>❌</button>
       </span>
     </li>
